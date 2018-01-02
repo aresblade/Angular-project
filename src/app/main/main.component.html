@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Wypożyczalnia gier</title>
+    <!-- Font Awesome -->
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="../../bootstrap/css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="../../bootstrap/css/style.css" rel="stylesheet">
+  
+    <script type="text/javascript" src="../../bootstrap/js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../../bootstrap/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../../bootstrap/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../../bootstrap/js/mdb.min.js"></script>
+    
+  </head>
+  <form class="filter">
+      <input class="form-control mr-sm-2" type="text" placeholder="Szukaj gry"  [(ngModel)]="term" [ngModelOptions]="{standalone: true}" >
+     
+    </form>
+
+    
+  <li *ngFor="let game of games.games | filter:term" style = "float:left;  padding: 16px;" >
+    <div  class="card" style="width: 15rem; height: auto">
+     <img class="card-img-top" src={{game.image}} alt="Card image cap">
+     <div class="card-block">
+       <a [routerLink]="['/games', game.id]"><h4 class="card-title">{{game.name}}</h4></a>
+       <p class="card-text"  >{{game.description}}</p>
+  
+     </div>
+   </div>
+  </li>
+    
+  
+  </html>
+  

@@ -1,0 +1,41 @@
+
+#bg {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+      
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+  }
+ /*
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+ */
+
+html {
+  background-color: black;
+  background: url(background/1.jpg); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow:auto;
+  
+  position: fixed;
+  background-attachment: scroll;
+  background-position: 50% 50%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  z-index: 0;
+  
+}
