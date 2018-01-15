@@ -34,11 +34,17 @@ export class MyGamesComponent implements OnInit {
   ) {}
 
   public returnGame(game) {
-    this.gamesService.returnGame(game.id).subscribe(res => {
-      this.gamesInfo[0].myGames = this.gamesInfo[0].myGames.filter(item => {
-        return item.id !== game.id;
-      });
+    this.gamesInfo["myGames"] = this.gamesInfo["myGames"].filter((item) => {
+      if (item.id !== game.id) {
+        return item;
+      }
     });
+
+    this.gamesService
+      .returnGame(game.id)
+      .subscribe((res) => {
+        console.log(res);
+      });
   }
 
   ngOnInit() {
