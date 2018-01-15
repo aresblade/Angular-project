@@ -1,5 +1,5 @@
 import { FilterPipe } from './../filter.pipe';
-import { UsersService } from './../users.service';
+import { GamesService } from './../games.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -13,14 +13,13 @@ export class MainComponent implements OnInit {
   private id;
   private sub: any;
 
-  
-  constructor(private userService: UsersService, private route: ActivatedRoute){
+  constructor(private gamesService: GamesService, private route: ActivatedRoute){
   }
 
   ngOnInit() {
-    this.userService.getGames()
+    this.gamesService.getGames()
     .subscribe(res => this.games = res);
-    
+
 
     this.sub = this.route.params.subscribe(params => {
       this.id = +params['id'];
@@ -30,6 +29,4 @@ export class MainComponent implements OnInit {
   ngOnDestroy() {
     this.sub.unsubscribe();
   }
-
-
 }

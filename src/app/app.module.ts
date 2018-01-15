@@ -11,6 +11,7 @@ import { AppRoutes } from 'app/app.routing';
 import { MainComponent } from './main/main.component';
 import { GameDetailComponent } from './gameDetail/gameDetail.component';
 import { FilterPipe } from './filter.pipe';
+import { GamesService } from './games.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { FilterPipe } from './filter.pipe';
     HttpModule,
     AppRoutes
   ],
-  providers: [UsersService],
+  providers: [UsersService, GamesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

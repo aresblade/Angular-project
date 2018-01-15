@@ -1,6 +1,6 @@
 import { FilterPipe } from './../filter.pipe';
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from 'app/users.service';
+import { GamesService } from 'app/games.service';
 import { ActivatedRoute } from '@angular/router';
 
 
@@ -13,7 +13,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class GameDetailComponent implements OnInit {
 
-  constructor(private userService: UsersService, private route: ActivatedRoute){
+  constructor(private gamesService: GamesService, private route: ActivatedRoute){
   }
 
   public gameID;
@@ -21,19 +21,16 @@ export class GameDetailComponent implements OnInit {
   specificGame = [];
 
   ngOnInit() {
-    this.userService.getGames()
-    .subscribe(res => this.games = res);
+    this.gamesService
+      .getGames()
+      .subscribe(res => this.games = res);
 
     let id = this.route.snapshot.params['id'];
     this.gameID = id;
-
-   
   }
 
   ifSelected(item){
     if (item == this.gameID) return true;
     else return false
   }
-
-
 }

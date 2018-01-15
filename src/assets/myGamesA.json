@@ -2,14 +2,14 @@
     "userID": "1",
     "myGames": [
         {
-            "gameID": "1",
+            "gameID": 1,
             "name": "Call of Duty 4: Modern Warfare",
             "description": "Call of Duty 4: Modern Warfare to kolejna gra z gatunku FPS, należąca do bestsellerowego cyklu, kojarzonego pierwotnie wyłącznie z II Wojną Światową. W przypadku utalentowani developerzy z firmy Infinity Ward postanowili jednak zerwać z tradycją, serwując nam konflikt zbrojny z przełomu XX i XXI wieku. Za tą wojenną zawieruchą stoi rosyjski skrajny nacjonalista nazwiskiem Zakajew, inspirujący światowy terroryzm, celem odwrócenia uwagi mocarstw od swojej próby zagarnięcia władzy w ojczyźnie.",
             "image": "https://www.gry-online.pl/galeria/gry13/93711625.jpg",
             "count": "3"
         },
         {
-            "gameID": "2",
+            "gameID": 2,
             "name": "The Sims 4",
             "description": "The Sims 4 na PC Windows to kolejna część serii popularnych na całym świecie wirtualnych symulatorów życia. Podobnie jak w przypadku poprzednich odsłon cyklu, za jego produkcję odpowiada amerykańskie studio Maxis. Pierwsze The Sims ukazało się jeszcze w 2000 roku. Jego pomysłodawcą był Will Wright, założyciel Maxis i twórca SimCity oraz innych pokrewnych mu gier z Sim w tytule, które święciły swoje największe sukcesy w latach 90. The Sims szybko przerosło popularnością pozostałe gry z katalogu dewelopera, stając się fenomenem i jedną z najpopularniejszych marek w branży elektronicznej rozrywki. Dzięki żywotności i popularności gry, od lat systematycznie ukazują się jej kolejne części oraz dziesiątki mniejszych i większych dodatków",
             "image": "https://www.gry-online.pl/galeria/gry13/85805339.jpg",

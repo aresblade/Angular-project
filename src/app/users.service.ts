@@ -5,28 +5,20 @@ import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-
-
 @Injectable()
 export class UsersService {
+  private domain = 'http://localhost:3000';
 
-constructor(private http: Http) {}
+  private currentUser = {
+    id: 1,
+    login: 'ares',
+    password: 'ares',
+    games: [1, 2]
+  };
 
-public getUser(): Observable<any> {
-    return this.http.get('./assets/userA.json')
-                    .map((res: Response) => res.json());
+  constructor(private http: Http) {}
 
-}
-public getMyGames(): Observable<any> {
-    return this.http.get('./assets/myGamesA.json')
-                    .map((res: Response) => res.json());
-
-}
-public getGames(): Observable<any> {
-    return this.http.get('./assets/games.json')
-                    .map((res: Response) => res.json());
-
-}
-
-
+  public getCurrentUser() {
+    return this.currentUser;
+  }
 }
