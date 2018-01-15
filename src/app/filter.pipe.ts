@@ -7,8 +7,8 @@ export class FilterPipe implements PipeTransform {
 
   transform(games: any, term: any): any {
     if (term === undefined) return games;
-    return games.filter(function(movie){
-      return movie.categoryIds.toString().toLowerCase().includes(term.toLowerCase());
+    return games.filter(function(game){
+      return game.name.toString().toLowerCase().includes(term.toLowerCase());
     });
   }
 

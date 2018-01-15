@@ -24,8 +24,12 @@
   <script type="text/javascript" src="../../bootstrap/js/mdb.min.js"></script>
 
 </head>
+<form class="filter">
+  <input class="form-control mr-sm-2" type="text" placeholder="Szukaj gry"  [(ngModel)]="term" [ngModelOptions]="{standalone: true}" >
+</form>
 
-<li *ngFor="let game of games.games" style="float:left;  padding: 16px;">
+
+<li *ngFor="let game of games.games  | filter:term " style="float:left;  padding: 16px;">
   <div *ngIf="ifSelected(game.id)">
     <div  class="card" style="width: 15rem; height: auto">
       <img class="card-img-top" src={{game.image}} alt="Card image cap">
