@@ -31,7 +31,7 @@
   <div class="card" style="width: 15rem;">
     <img class="card-img-top" src={{game.image}} alt="Card image cap">
     <div class="card-block">
-      <a [routerLink]="['/games', game.gameID]"><h4 class="card-title">{{game.name.toString()}}</h4></a>
+      <a [routerLink]="['/games', game.id]"><h4 class="card-title">{{game.name.toString()}}</h4></a>
       <p class="card-text" id="truncateLongTexts" >{{game.description.toString()}}</p>
       <button
         class="btn btn-primary btn-block"
@@ -43,4 +43,5 @@
   </div>
 </li>
 
+<button (click)=test()>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</button>
 </html>

@@ -1,5 +1,8 @@
+import { ActivatedRoute } from '@angular/router';
+import { GamesService } from './../games.service';
 import { Component, OnInit } from '@angular/core';
 import { FilterPipe } from './../filter.pipe';
+import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 
 @Component({
   selector: 'app-proposition',
@@ -8,9 +11,25 @@ import { FilterPipe } from './../filter.pipe';
 })
 export class PropositionComponent implements OnInit {
 
-  constructor() { }
+  games = [];
 
+
+  constructor(private gamesService: GamesService, private route: ActivatedRoute) { }
+
+ 
+
+
+ 
   ngOnInit() {
+    this.gamesService
+      .getProposition()
+      .subscribe((res) => {
+        this.games = res
+      });
   }
 
+   test(){
+    console.log(this.games);
+    
+  }
 }
