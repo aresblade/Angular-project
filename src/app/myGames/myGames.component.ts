@@ -46,9 +46,7 @@ export class MyGamesComponent implements OnInit {
       this.gamesInfo = res;
     });
   }
-  test(){
-    console.log(this.gamesInfo["myGames"])
-  }
+
 
 
 }
