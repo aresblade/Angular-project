@@ -35,6 +35,7 @@ export class MyGamesComponent implements OnInit {
 
   public returnGame(game) {
     this.gamesInfo["myGames"] = this.gamesInfo["myGames"].filter((item) => {
+      console.log(item);
       if (item.id !== game.id) {
         return item;
       }

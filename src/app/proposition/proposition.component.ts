@@ -1,35 +1,41 @@
-import { ActivatedRoute } from '@angular/router';
-import { GamesService } from './../games.service';
-import { Component, OnInit } from '@angular/core';
-import { FilterPipe } from './../filter.pipe';
-import { Message } from '@angular/compiler/src/i18n/i18n_ast';
+import { ActivatedRoute } from "@angular/router";
+import { GamesService } from "./../games.service";
+import { Component, OnInit } from "@angular/core";
+import { FilterPipe } from "./../filter.pipe";
+import { Message } from "@angular/compiler/src/i18n/i18n_ast";
 
 @Component({
-  selector: 'app-proposition',
-  templateUrl: './proposition.component.html',
-  styleUrls: ['./proposition.component.css']
+  selector: "app-proposition",
+  templateUrl: "./proposition.component.html",
+  styleUrls: ["./proposition.component.css"]
 })
 export class PropositionComponent implements OnInit {
-
   games = [];
 
+  constructor(
+    private gamesService: GamesService,
+    private route: ActivatedRoute
+  ) {}
 
-  constructor(private gamesService: GamesService, private route: ActivatedRoute) { }
-
- 
-
-
- 
-  ngOnInit() {
-    this.gamesService
-      .getProposition()
-      .subscribe((res) => {
-        this.games = res
-      });
+  public rentGame(game) {
+    console.log(this.games["games"] );
+    this.games["games"] = this.games["games"].filter(item => {
+      if (item.id !== game.id) {
+        return game;
+      }
+    });
+    this.gamesService.rentGame(game.id).subscribe(res => {
+      console.log(res);
+    });
   }
 
-   test(){
+  ngOnInit() {
+    this.gamesService.getProposition().subscribe(res => {
+      this.games = res;
+    });
+  }
+
+  test() {
     console.log(this.games);
-    
   }
 }
