@@ -34,18 +34,13 @@ export class MyGamesComponent implements OnInit {
   ) {}
 
   public returnGame(game) {
-    this.gamesInfo["myGames"] = this.gamesInfo["myGames"].filter((item) => {
-      console.log(item);
+    this.gamesInfo["myGames"] = this.gamesInfo["myGames"].filter(item => {
       if (item.id !== game.id) {
         return item;
       }
     });
 
-    this.gamesService
-      .returnGame(game.id)
-      .subscribe((res) => {
-        console.log(res);
-      });
+    this.gamesService.returnGame(game.id).subscribe(res => {});
   }
 
   ngOnInit() {
@@ -53,7 +48,4 @@ export class MyGamesComponent implements OnInit {
       this.gamesInfo = res;
     });
   }
-
-
-
 }

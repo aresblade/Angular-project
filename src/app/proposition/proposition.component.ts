@@ -18,24 +18,17 @@ export class PropositionComponent implements OnInit {
   ) {}
 
   public rentGame(game) {
-    console.log(this.games["games"] );
     this.games["games"] = this.games["games"].filter(item => {
       if (item.id !== game.id) {
         return game;
       }
     });
-    this.gamesService.rentGame(game.id).subscribe(res => {
-      console.log(res);
-    });
+    this.gamesService.rentGame(game.id).subscribe(res => {});
   }
 
   ngOnInit() {
     this.gamesService.getProposition().subscribe(res => {
       this.games = res;
     });
-  }
-
-  test() {
-    console.log(this.games);
   }
 }
