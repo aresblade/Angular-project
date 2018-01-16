@@ -1,19 +1,9 @@
 ## Aplikacja do wymiany gier
  
  
- Cele:
+ Autorzy:
 
-  - Strona powitalna
-  - Lista moich gier
-  - Lista poszukiwanych przeze mnie gier
-  - Lista gier innych użytkowników z opcją wyszukiwania
-  - Szczegóły gry (swojej jak i innego użytkownika)
-  - Szczegóły innego użytkownika (lista jego gier, gier poszukiwanych, ocena, komentarze)
+  - Dawid Kędzierski
+  - Grzegorz Stępień
 
 
-Opcjonalne:
-
-  - Opcja wymień grę (możliwa tylko jeśli inny użytkownik poszukuje gry, którą ja mam)
-  - Dodawanie komentarza po transakcji
-  - Dodawanie nowej gry
-  - Dodawanie nowej poszukiwanej gry
